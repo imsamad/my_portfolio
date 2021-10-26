@@ -3,28 +3,29 @@ import { Box } from '@mui/system';
 import React from 'react';
 import Toolbar from '@mui/material/Toolbar';
 
-import PojectCard from './PojectCard';
+import ServiceCard from './ServiceCard';
 
 const index = () => {
   return (
     <Box
       component="section"
-      id="projects"
+      id="services"
       sx={{ width: '100%', bgcolor: 'grey.100' }}
     >
       <Container fixed>
         <Divider />
         <Toolbar />
+
         <Typography
           variant="caption"
           align="center"
           component="h1"
           sx={{ fontWeight: 600 }}
         >
-          My Portfolio
+          What I Offer
         </Typography>
         <Typography variant="h4" align="center" gutterBottom sx={{ pb: 1 }}>
-          My Projects
+          My Services
         </Typography>
         <Grid
           container
@@ -33,7 +34,7 @@ const index = () => {
           alignItems="center"
           justifyContent="flex-start"
         >
-          <PojectCard />
+          <ServiceCard />
         </Grid>
       </Container>
       <Toolbar />

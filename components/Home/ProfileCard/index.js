@@ -1,19 +1,15 @@
 import React from 'react';
 import { Button, Typography } from '@mui/material';
-
 import { Box } from '@mui/system';
-import PhoneIcon from '@mui/icons-material/LocalPhone';
-import EmailIcon from '@mui/icons-material/Email';
-import TwitterIcon from '@mui/icons-material/Twitter';
-
-import IconButton from '@mui/material/IconButton';
 import DownloadIcon from '@mui/icons-material/Download';
+
+import SocialLinks from '../../SocialLinks';
+
 const index = () => {
   return (
     <Box
       sx={{
-        px: 2,
-        py: '3rem',
+        py: '2rem',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -39,10 +35,9 @@ const index = () => {
       <Typography
         variant="h6"
         component="h1"
-        sx={{ fontWeight: 600 }}
         align="center"
         color="info.dark"
-        sx={{ mt: 2, fontSize: '1.5rem' }}
+        sx={{ mt: 2, fontSize: '1.5rem', fontWeight: 600 }}
       >
         Abdus Samad
       </Typography>
@@ -54,23 +49,7 @@ const index = () => {
       >
         Full Stack Developer
       </Typography>
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          py: '1.5rem',
-        }}
-      >
-        <IconButton size="small" sx={{ display: 'inline-block' }}>
-          <TwitterIcon fontSize="small" color="info" />
-        </IconButton>
-        <IconButton size="small" sx={{ display: 'inline-block', mx: 2 }}>
-          <PhoneIcon fontSize="small" color="info" />
-        </IconButton>
-        <IconButton size="small" sx={{ display: 'inline-block' }}>
-          <EmailIcon fontSize="small" color="info" />
-        </IconButton>
-      </Box>
+      <SocialLinks />
       <Button
         variant="contained"
         color="info"

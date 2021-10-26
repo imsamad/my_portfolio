@@ -5,12 +5,12 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import PhoneIcon from '@mui/icons-material/LocalPhoneTwoTone';
-// import EmailIcon from '@mui/icons-material/MailOutlineTwoTone';
 import EmailIcon from '@mui/icons-material/AlternateEmail';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import TableHead from '@mui/material/TableHead';
 import ContactIcon from '@mui/icons-material/ContactMail';
-import { Typography } from '@mui/material';
+import Typography from '@mui/material/Typography';
+
 const Info = [
   {
     icon: <PhoneIcon fontSize="small" color="info" />,
@@ -20,12 +20,15 @@ const Info = [
     icon: <EmailIcon fontSize="small" color="info" />,
     label: 'asdevlpr1206@gmail.com',
   },
-  { icon: <TwitterIcon fontSize="small" color="info" />, label: 'imsamad06' },
+  {
+    icon: <TwitterIcon fontSize="small" color="info" />,
+    label: 'twitter.com/imsamad06',
+  },
 ];
 const TR = ({ icon, label }) => (
   <TableRow>
-    <TableCell sx={{ border: 0 }}>{icon}</TableCell>
-    <TableCell sx={{ border: 0 }}>{label}</TableCell>
+    <TableCell sx={{ border: 0, p: 1.5 }}>{icon}</TableCell>
+    <TableCell sx={{ border: 0, p: 1.5 }}>{label}</TableCell>
   </TableRow>
 );
 export default function BasicTable() {

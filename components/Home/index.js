@@ -3,12 +3,13 @@ import { Box } from '@mui/system';
 import React from 'react';
 import ProfileCard from './ProfileCard';
 import Intro from './Intro';
+
 const index = () => {
   return (
     <Box
       component="section"
       id="home"
-      sx={{ minHeight: '90vh', width: '100%', bgcolor: 'grey.50' }}
+      sx={{ width: '100%', bgcolor: 'grey.100' }}
     >
       <Toolbar />
       <Container fixed>
@@ -21,6 +22,7 @@ const index = () => {
           </Grid>
         </Grid>
       </Container>
+      <Toolbar />
     </Box>
   );
 };

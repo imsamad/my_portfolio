@@ -8,7 +8,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import Table from './Table';
 const index = () => {
   return (
-    <Box sx={{ px: 2, py: 3 }}>
+    <Box sx={{ pt: '2rem' }}>
       <Typography
         variant="caption"
         align="center"
@@ -18,13 +18,13 @@ const index = () => {
       >
         My Intro
       </Typography>
-      <Typography variant="h6" align="center" gutterBottom>
+      <Typography variant="h4" align="center" gutterBottom>
         About Me
       </Typography>
       <Typography
         align="center"
         variant="body1"
-        sx={{ fontSize: { md: '1.2rem' }, my: 4 }}
+        sx={{ fontSize: { md: '1.2rem' } }}
       >
         I am Abdus Samad, a full stack web developer focused on crafting great
         web experiences. Designing and Coding have been my passion since the
@@ -32,14 +32,15 @@ const index = () => {
         design/development since 2007. I enjoy creating beautifully designed,
         intuitive and functional websites.
       </Typography>
-      <Box sx={{ my: 4 }}>
+      <Box sx={{ mt: 4 }}>
         <Table />
       </Box>
     </Box>
   );
 };
+
 const Info = () => (
-  <>
+  <Box sx={{ maxWidth: 200, overflow: 'auto', border: 2 }}>
     <Typography variant="h5">Information</Typography>
     <Box sx={{ display: 'flex', my: 1, flexWrap: 'wrap' }}>
       <PhoneIcon color="info" />
@@ -55,6 +56,6 @@ const Info = () => (
       <TwitterIcon color="info" />
       <Typography sx={{ mx: 2 }}>imsamad06</Typography>
     </Box>
-  </>
+  </Box>
 );
 export default index;

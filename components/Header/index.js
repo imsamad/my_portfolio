@@ -16,6 +16,7 @@ const index = () => {
           </Typography>
           <NavLink href="#home" label="AboutMe" />
           <NavLink href="#skills" label="Skills" />
+          <NavLink href="#services" label="Services" />
           <NavLink href="#projects" label="Projects" />
           <NavLink href="#contact" label="ContactMe" />
         </Toolbar>
