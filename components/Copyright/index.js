@@ -7,7 +7,7 @@ const index = () => {
     <Box
       component="section"
       id="copyright"
-      sx={{ height: '40vh', width: '100%', bgcolor: 'secondary.main' }}
+      sx={{ height: '40vh', width: '100%', bgcolor: 'grey.500' }}
     >
       <Container fixed>
         <Typography variant="h1"> Copyright </Typography>
