@@ -23,15 +23,25 @@ const index = () => {
         >
           My Portfolio
         </Typography>
-        <Typography variant="h4" align="center" gutterBottom sx={{ pb: 1 }}>
+        <Typography
+          variant="h4"
+          align="center"
+          color="info.light"
+          gutterBottom
+          sx={{
+            pb: 1,
+            fontSize: { xs: '1.5rem', mxs: '2rem' },
+            fontWeight: 700,
+          }}
+        >
           My Projects
         </Typography>
         <Grid
           container
           spacing={2}
           direction="row"
-          alignItems="center"
-          justifyContent="flex-start"
+          justifyContent="center"
+          alignItems="stretch"
         >
           <PojectCard />
         </Grid>

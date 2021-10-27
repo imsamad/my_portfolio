@@ -28,7 +28,7 @@ const index = () => {
 const MyLink = ({ href, Icon }) => (
   <Link href={href} target="_blank" rel="noopener" sx={{ mr: 1 }}>
     <IconButton size="small" sx={{ display: 'inline-block' }}>
-      <Icon fontSize="small" color="primary" />
+      <Icon fontSize="small" color="info" />
     </IconButton>
   </Link>
 );

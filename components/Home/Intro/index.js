@@ -18,7 +18,12 @@ const index = () => {
       >
         My Intro
       </Typography>
-      <Typography variant="h4" align="center" gutterBottom>
+      <Typography
+        align="center"
+        gutterBottom
+        color="info.light"
+        sx={{ fontSize: { xs: '1.5rem', mxs: '2rem' }, fontWeight: 700 }}
+      >
         About Me
       </Typography>
       <Typography

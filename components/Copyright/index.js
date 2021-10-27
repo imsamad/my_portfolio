@@ -23,8 +23,13 @@ const index = () => {
             alignItems: 'center',
           }}
         >
-          <Typography sx={{ fontSize: '1.5rem' }}> Abdus Samad </Typography>
-          <Typography>
+          <Typography
+            color="grey.1000"
+            sx={{ fontSize: '1.5rem', fontWeight: 700 }}
+          >
+            Abdus Samad
+          </Typography>
+          <Typography align="center" sx={{ mb: 2 }}>
             I m Abdus Samad and this is my personal website , consult me here.
           </Typography>
           <SocialLinks />

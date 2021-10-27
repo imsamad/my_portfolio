@@ -1,60 +1,69 @@
-import { Grid, List, Typography } from '@mui/material';
+import {
+  List,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Typography,
+} from '@mui/material';
 
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 import InboxIcon from '@mui/icons-material/Inbox';
 import React from 'react';
-import { Box } from '@mui/system';
 import toCapitalise from '../../../lib/toCapitalise';
-const index = ({ name, list }) => (
-  <Grid xs={12} sm={6} md={4} item>
-    <Box
-      sx={{
-        border: 0.5,
-        borderRadius: 2,
-        py: 2,
-        borderColor: 'info.main',
-      }}
-    >
-      <Typography align="center" variant="h6" color="info.main" gutterBottom>
-        {toCapitalise(name)}
-      </Typography>
-      <List dense={true} sx={{ p: 0 }}>
-        {list.map((list) => (
-          <SingleCourse
-            key={list.label}
-            percentage={list.percentage}
-            label={list.label}
-          />
-        ))}
-      </List>
-    </Box>
-  </Grid>
+
+const indexx = ({ skill }) => (
+  <Card
+    sx={{
+      bgcolor: 'inherit',
+      boxShadow: 0,
+      border: 0.5,
+      borderRadius: 2,
+      borderColor: 'info.main',
+    }}
+  >
+    <CardContent>
+      <TableContainer>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell colSpan={3} align="center" sx={{ border: 0, p: 0 }}>
+                <Typography align="center" variant="h6" color="info.main">
+                  {toCapitalise(skill.name)}
+                </Typography>
+              </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {skill.list.map((list) => (
+              <TableRow key={list.label}>
+                <TableCell sx={{ border: 0, p: 1 }}>
+                  <InboxIcon size="small" color="info" />
+                </TableCell>
+                <TableCell sx={{ border: 0, p: 1 }}>
+                  <Typography>{list.label}</Typography>
+                  <Typography
+                    sx={{
+                      height: 5,
+                      width: `${list.percentage}%`,
+                      bgcolor: 'info.main',
+                      mt: 0.5,
+                    }}
+                  />
+                </TableCell>
+                <TableCell sx={{ border: 0, p: 1 }}>
+                  {list.percentage}%
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </CardContent>
+  </Card>
 );
 
-const SingleCourse = ({ label, percentage }) => (
-  <ListItem disablePadding secondaryAction={<>{percentage}%</>}>
-    <ListItemButton>
-      <ListItemIcon>
-        <InboxIcon size="small" color="info" />
-      </ListItemIcon>
-      <ListItemText
-        primary={label}
-        secondary={
-          <Typography
-            sx={{
-              height: 5,
-              width: `${percentage}%`,
-              bgcolor: 'info.main',
-              mt: 0.5,
-            }}
-          />
-        }
-      />
-    </ListItemButton>
-  </ListItem>
-);
-
-export default index;
+export default indexx;

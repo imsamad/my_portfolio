@@ -48,18 +48,30 @@ const index = () => {
         >
           Why choose me
         </Typography>
-        <Typography variant="h4" align="center" gutterBottom sx={{ pb: 1 }}>
+        <Typography
+          variant="h4"
+          align="center"
+          gutterBottom
+          color="info.light"
+          sx={{
+            pb: 1,
+            fontSize: { xs: '1.5rem', mxs: '2rem' },
+            fontWeight: 700,
+          }}
+        >
           My skills
         </Typography>
         <Grid
           container
           spacing={2}
           direction="row"
-          alignItems="center"
-          justifyContent="flex-start"
+          justifyContent="center"
+          alignItems="stretch"
         >
           {skills.map((skill) => (
-            <SkillCard key={skill.name} name={skill.name} list={skill.list} />
+            <Grid key={skill.name} xs={12} sm={6} md={4} item>
+              <SkillCard name={skill.name} list={skill.list} skill={skill} />
+            </Grid>
           ))}
         </Grid>
         <Toolbar />

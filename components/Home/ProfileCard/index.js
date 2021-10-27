@@ -36,8 +36,8 @@ const index = () => {
         variant="h6"
         component="h1"
         align="center"
-        color="info.dark"
-        sx={{ mt: 2, fontSize: '1.5rem', fontWeight: 600 }}
+        color="info.light"
+        sx={{ mt: 2, fontSize: { xs: '1.5rem', mxs: '2rem' }, fontWeight: 700 }}
       >
         Abdus Samad
       </Typography>
