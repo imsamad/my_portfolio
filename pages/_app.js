@@ -1,14 +1,14 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Head from 'next/head';
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import { CacheProvider } from '@emotion/react';
-import theme from '../mui/theme';
-import createEmotionCache from '../mui/createEmotionCache';
+import * as React from "react";
+import PropTypes from "prop-types";
+import Head from "next/head";
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import { CacheProvider } from "@emotion/react";
+import theme from "../mui/theme";
+import createEmotionCache from "../mui/createEmotionCache";
 
-import { Box } from '@mui/system';
-import Header from '../components/Header';
+import { Box } from "@mui/system";
+// import Header from '../components/Header';
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
@@ -27,11 +27,11 @@ export default function MyApp(props) {
         <CssBaseline />
         <Box
           sx={{
-            overflow: 'hidden',
-            maxWidth: '100vw',
+            overflow: "hidden",
+            maxWidth: "100vw",
           }}
         >
-          <Header />
+          {/* <Header /> */}
           <Component {...pageProps} />
           <style>{`
           html{

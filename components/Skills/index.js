@@ -1,32 +1,32 @@
-import { Container, Divider, Typography, Grid } from '@mui/material';
-import { Box } from '@mui/system';
-import React from 'react';
-import Toolbar from '@mui/material/Toolbar';
+import { Container, Divider, Typography, Grid } from "@mui/material";
+import { Box } from "@mui/system";
+import React from "react";
+import Toolbar from "@mui/material/Toolbar";
 
-import SkillCard from './SkillCard';
+import SkillCard from "./SkillCard";
 const skills = [
   {
-    name: 'Frontend',
+    name: "Frontend",
     list: [
-      { label: 'React.js/Next.js', percentage: '90', icon: '' },
-      { label: 'HTML/CSS', percentage: '90', icon: '' },
-      { label: 'Next.js', percentage: '90', icon: '' },
+      { label: "React.js/Next.js", percentage: "90", icon: "" },
+      { label: "HTML/CSS", percentage: "90", icon: "" },
+      { label: "Next.js", percentage: "90", icon: "" },
     ],
   },
   {
-    name: 'Backend',
+    name: "Backend",
     list: [
-      { label: 'Node/Express', percentage: '90', icon: '' },
-      { label: 'Firebase', percentage: '70', icon: '' },
-      { label: 'CMS(Strapi)', percentage: '80', icon: '' },
+      { label: "Node/Express", percentage: "90", icon: "" },
+      { label: "Firebase", percentage: "70", icon: "" },
+      { label: "CMS(Strapi)", percentage: "80", icon: "" },
     ],
   },
   {
-    name: 'database',
+    name: "database",
     list: [
-      { label: 'MongoDB', percentage: '90', icon: '' },
-      { label: 'Firebase', percentage: '70', icon: '' },
-      { label: 'MySql', percentage: '85', icon: '' },
+      { label: "MongoDB", percentage: "90", icon: "" },
+      { label: "Firebase", percentage: "70", icon: "" },
+      { label: "MySql", percentage: "85", icon: "" },
     ],
   },
 ];
@@ -35,7 +35,7 @@ const index = () => {
     <Box
       component="section"
       id="skills"
-      sx={{ width: '100%', bgcolor: 'grey.100' }}
+      sx={{ width: "100%", bgcolor: "grey.100", pt: 1 }}
     >
       <Container fixed>
         <Divider />
@@ -55,7 +55,7 @@ const index = () => {
           color="info.light"
           sx={{
             pb: 1,
-            fontSize: { xs: '1.5rem', mxs: '2rem' },
+            fontSize: { xs: "1.5rem", mxs: "2rem" },
             fontWeight: 700,
           }}
         >

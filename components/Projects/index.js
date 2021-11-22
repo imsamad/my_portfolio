@@ -1,16 +1,16 @@
-import { Container, Typography, Divider, Grid } from '@mui/material';
-import { Box } from '@mui/system';
-import React from 'react';
-import Toolbar from '@mui/material/Toolbar';
+import { Container, Typography, Divider, Grid } from "@mui/material";
+import { Box } from "@mui/system";
+import React from "react";
+import Toolbar from "@mui/material/Toolbar";
 
-import PojectCard from './PojectCard';
+import PojectCard from "./PojectCard";
 
 const index = () => {
   return (
     <Box
       component="section"
       id="projects"
-      sx={{ width: '100%', bgcolor: 'grey.100' }}
+      sx={{ width: "100%", bgcolor: "grey.100", pt: 1 }}
     >
       <Container fixed>
         <Divider />
@@ -30,7 +30,7 @@ const index = () => {
           gutterBottom
           sx={{
             pb: 1,
-            fontSize: { xs: '1.5rem', mxs: '2rem' },
+            fontSize: { xs: "1.5rem", mxs: "2rem" },
             fontWeight: 700,
           }}
         >

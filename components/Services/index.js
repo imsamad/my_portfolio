@@ -1,40 +1,40 @@
-import { Container, Typography, Divider, Grid } from '@mui/material';
-import { Box } from '@mui/system';
-import React from 'react';
-import Toolbar from '@mui/material/Toolbar';
-import ServiceCard from './ServiceCard';
+import { Container, Typography, Divider, Grid } from "@mui/material";
+import { Box } from "@mui/system";
+import React from "react";
+import Toolbar from "@mui/material/Toolbar";
+import ServiceCard from "./ServiceCard";
 
 const services = [
   {
-    label: 'Full-stack Web Hosting',
+    label: "Full-stack Web Hosting",
 
     description:
-      'This service I provide is of high qualit and above all full of experience in this field.',
-    icon: '',
+      "This service I provide is of high qualit and above all full of experience in this field.",
+    icon: "",
   },
   {
-    label: 'Full-stack E-commerce Development',
+    label: "Full-stack E-commerce Development",
     description:
-      'This service I provide is of high qualit and above all full of experience in this field.',
-    icon: '',
+      "This service I provide is of high qualit and above all full of experience in this field.",
+    icon: "",
   },
   {
-    label: 'API Development',
+    label: "API Development",
     description:
-      'This service I provide is of high qualit and above all full of experience in this field.',
-    icon: '',
+      "This service I provide is of high qualit and above all full of experience in this field.",
+    icon: "",
   },
   {
-    label: 'Frontend Development',
+    label: "Frontend Development",
     description:
-      'This service I provide is of high qualit and above all full of experience in this field.',
-    icon: '',
+      "This service I provide is of high qualit and above all full of experience in this field.",
+    icon: "",
   },
   {
-    label: 'Full-Stack Development',
+    label: "Full-Stack Development",
     description:
-      'This service I provide is of high qualit and above all full of experience in this field.',
-    icon: '',
+      "This service I provide is of high qualit and above all full of experience in this field.",
+    icon: "",
   },
 ];
 
@@ -43,7 +43,7 @@ const index = () => {
     <Box
       component="section"
       id="services"
-      sx={{ width: '100%', bgcolor: 'grey.100' }}
+      sx={{ width: "100%", bgcolor: "grey.100", pt: 1 }}
     >
       <Container fixed>
         <Divider />
@@ -63,7 +63,7 @@ const index = () => {
           color="info.light"
           sx={{
             pb: 1,
-            fontSize: { xs: '1.5rem', mxs: '2rem' },
+            fontSize: { xs: "1.5rem", mxs: "2rem" },
             fontWeight: 700,
           }}
         >
@@ -83,7 +83,7 @@ const index = () => {
               sm={6}
               md={4}
               item
-              sx={{ height: '100%' }}
+              sx={{ height: "100%" }}
             >
               <ServiceCard service={service} />
             </Grid>
