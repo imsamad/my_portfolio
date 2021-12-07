@@ -23,7 +23,7 @@ const index = () => {
   return (
     <Box sx={{ position: "absolute", top: 0, left: 200 }}>
       <Tooltip
-        title={copied ? "Copied" : "Copy Info"}
+        title={copied ? "Copied to clipboard" : "Copy Info"}
         open={hover || copied}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -35,7 +35,7 @@ const index = () => {
             setTimeout(() => setCopied(false), 2000);
           }}
         >
-          {copied ? <CheckIcon /> : <CopyAllIcon color="success" />}
+          {copied ? <CheckIcon color="success" /> : <CopyAllIcon />}
         </IconButton>
       </Tooltip>
     </Box>

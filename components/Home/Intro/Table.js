@@ -9,6 +9,8 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import TableHead from "@mui/material/TableHead";
 import ContactIcon from "@mui/icons-material/ContactMail";
 import Typography from "@mui/material/Typography";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 import CopyMyInfo from "../../CopyMyInfo";
 
@@ -19,11 +21,19 @@ const Info = [
   },
   {
     icon: <EmailIcon fontSize="small" color="info" />,
-    label: "asdevlpr1206@gmail.com",
+    label: "imsamad00@gmail.com",
   },
   {
     icon: <TwitterIcon fontSize="small" color="info" />,
     label: "twitter.com/imsamad06",
+  },
+  {
+    icon: <GitHubIcon fontSize="small" color="info" />,
+    label: "github.com/imsamad",
+  },
+  {
+    icon: <LinkedInIcon fontSize="small" color="info" />,
+    label: "linkedin.com/in/imsamad",
   },
 ];
 
@@ -33,7 +43,7 @@ const TR = ({ icon, label }) => (
     <TableCell sx={{ border: 0, p: 1.5 }}>{label}</TableCell>
   </TableRow>
 );
-export default function BasicTable() {
+export default function InfoTable() {
   return (
     <TableContainer sx={{ position: "relative" }}>
       <Table sx={{ maxWidth: 200 }}>

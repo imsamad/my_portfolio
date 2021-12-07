@@ -3,13 +3,11 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import Link from "@mui/material/Link";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 
 import SideNavbar from "../SideNavbar";
-
+import NavLink from "../NavLink";
 const index = () => {
   const [sideNav, setSideNav] = useState(false);
   const toggleDrawer = (open) => (event) => {
@@ -57,20 +55,3 @@ const index = () => {
   );
 };
 export default index;
-const NavLink = ({ href, label }) => (
-  <Link href={href} underline="none">
-    <Button
-      sx={{
-        color: "#fff",
-        fontWeight: 700,
-        letterSpacing: 2,
-        textTransform: "none",
-        letterSpacing: "2px",
-        mr: 2,
-        fontSize: 16,
-      }}
-    >
-      {label}
-    </Button>
-  </Link>
-);
