@@ -28,9 +28,9 @@ const index = () => {
   };
   const submitForm = async (e) => {
     e.preventDefault();
-    if (!formData.name.length > 0) {
+    if (formData.name.length === 0) {
       setError((pre) => ({ ...pre, name: true }));
-    } else if (!formData.email.length < 0 || !validEmail(formData.email)) {
+    } else if (formData.email.length === 0 || !validEmail(formData.email)) {
       setError((pre) => ({ ...pre, email: true }));
     } else {
       setLoading(true);
@@ -43,12 +43,14 @@ const index = () => {
           body: JSON.stringify(formData),
         });
         const data = await res.json();
+        // console.log("data ", data);
         setHeadMsg({
           open: true,
           type: "success",
           message: "Sent successfully!",
         });
       } catch (err) {
+        // console.log("Err from submitContactForm", err);
         setHeadMsg({
           open: true,
           type: "error",

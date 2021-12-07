@@ -33,12 +33,15 @@ const index = (req, res) => {
 
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
-        return res
-          .status(404)
-          .send("There is some error in sending mail, plz try again!");
+        return res.status(404).json({
+          success: false,
+          message: "There is some error in sending mail, plz try again!",
+        });
       } else {
-        console.log("Email sent: " + info.response);
-        return res.status(200).send("Message been sent successfully.");
+        // console.log("Email sent: " + info.response);
+        return res
+          .status(200)
+          .json({ success: true, message: "Message been sent successfully." });
       }
     });
   } else {

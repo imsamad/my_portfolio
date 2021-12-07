@@ -7,7 +7,6 @@ import { CacheProvider } from "@emotion/react";
 import theme from "../mui/theme";
 import createEmotionCache from "../mui/createEmotionCache";
 import Box from "@mui/system/Box";
-import TopBtn from "../components/TopBtn";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -19,6 +18,7 @@ export default function MyApp(props) {
       <Head>
         <title>Abdus Samad</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <link rel="shortcut icon" href="/icons/favicon.ico" />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
@@ -29,7 +29,6 @@ export default function MyApp(props) {
           }}
         >
           <Component {...pageProps} />
-          <TopBtn />
           <style>{`
           html{
             scroll-behavior: smooth;

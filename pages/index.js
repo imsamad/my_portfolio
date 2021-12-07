@@ -5,6 +5,7 @@ import Contact from "../components/Contact";
 import Copyright from "../components/Copyright";
 import Services from "../components/Services";
 import Header from "../components/Header";
+import TopBtn from "../components/TopBtn";
 
 import data from "../lib/data";
 
@@ -19,6 +20,7 @@ export default function About({ data }) {
       <Projects projects={data.projects} />
       <Contact contact={data.contact} />
       <Copyright copyright={data.copyright} />
+      <TopBtn />
     </>
   );
 }
