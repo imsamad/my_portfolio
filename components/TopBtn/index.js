@@ -4,7 +4,7 @@ import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 
 const index = () => {
   return (
-    <Box sx={{ position: "fixed", bottom: 20, right: 20, zIndex: 100 }}>
+    <Box sx={{ position: "fixed", bottom: 30, right: 20, zIndex: 100 }}>
       <Fab color="primary" size="medium" onClick={() => window.scrollTo(0, 0)}>
         <ArrowUpwardIcon size="medium" />
       </Fab>

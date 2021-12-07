@@ -10,7 +10,7 @@ const NavLink = ({ href, label, sx }) => (
         fontWeight: 700,
         letterSpacing: 2,
         textTransform: "none",
-        letterSpacing: "2px",
+        letterSpacing: 2,
         mr: 2,
         fontSize: 16,
       }}
