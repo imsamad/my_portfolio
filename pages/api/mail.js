@@ -4,12 +4,12 @@ const myEmail = process.env.MY_EMAIL;
 const myPwd = process.env.MY_PASSWORD;
 
 const index = (req, res) => {
-  let { name, email, subject, message } = req.body;
-  if (!name || !email || !validEmail(email)) {
-    return res.status(400).send("Send proper data");
-  }
-
   if (req.method === "POST") {
+    let { name, email, subject, message } = req.body;
+    if (!name || !email || !validEmail(email)) {
+      return res.status(400).send("Send proper data");
+    }
+
     var transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
