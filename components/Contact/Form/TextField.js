@@ -1,6 +1,6 @@
+import React from "react";
 import { styled } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
-
 const CssTextField = styled(TextField)(({ theme }) => {
   const info = theme.palette.info;
   return {
@@ -24,11 +24,11 @@ const CssTextField = styled(TextField)(({ theme }) => {
     },
   };
 });
-const index = (props) => {
+const index = React.forwardRef((props, ref) => {
   const { name, label, ...rest } = props;
-
   return (
     <CssTextField
+      ref={ref}
       fullWidth
       label={label}
       name={name}
@@ -36,6 +36,6 @@ const index = (props) => {
       {...rest}
     />
   );
-};
+});
 
 export default index;
