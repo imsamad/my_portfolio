@@ -6,17 +6,25 @@ import Copyright from "../components/Copyright";
 import Services from "../components/Services";
 import Header from "../components/Header";
 
-export default function About() {
+import data from "../lib/data";
+
+export default function About({ data }) {
   return (
     <>
       <Header />
-      <Home />
-      <Skills />
-      <Services />
+      <Home intro={data.intro} />
+      <Skills skills={data.skills} />
+      <Services services={data.services} />
 
-      <Projects />
-      <Contact />
-      <Copyright />
+      <Projects projects={data.projects} />
+      <Contact contact={data.contact} />
+      <Copyright copyright={data.copyright} />
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  return {
+    props: { data },
+  };
+};

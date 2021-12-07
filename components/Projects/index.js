@@ -1,11 +1,11 @@
-import { Container, Typography, Divider, Grid } from "@mui/material";
+import { Container, Typography, Divider, Grid, Link } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import Toolbar from "@mui/material/Toolbar";
 
 import PojectCard from "./PojectCard";
 
-const index = () => {
+const index = ({ projects }) => {
   return (
     <Box
       component="section"
@@ -21,7 +21,7 @@ const index = () => {
           component="h1"
           sx={{ fontWeight: 600 }}
         >
-          My Portfolio
+          {projects.subHeading}
         </Typography>
         <Typography
           variant="h4"
@@ -34,7 +34,21 @@ const index = () => {
             fontWeight: 700,
           }}
         >
-          My Projects
+          {projects.heading}
+        </Typography>
+        <Typography
+          sx={{
+            maxWidth: "sm",
+            textAlign: "center",
+            mx: "auto",
+            letterSpacing: 2,
+            mb: 2,
+          }}
+        >
+          {projects.headline}{" "}
+          <Link href="https://github.com/imsamad" target="_blank">
+            Github.
+          </Link>
         </Typography>
         <Grid
           container
@@ -43,7 +57,9 @@ const index = () => {
           justifyContent="center"
           alignItems="stretch"
         >
-          <PojectCard />
+          {projects.list.map((project) => (
+            <PojectCard project={project} key={project.id || project._id} />
+          ))}
         </Grid>
       </Container>
       <Toolbar />

@@ -7,22 +7,22 @@ import {
   TableHead,
   TableRow,
   Typography,
-} from '@mui/material';
+} from "@mui/material";
 
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import InboxIcon from '@mui/icons-material/Inbox';
-import React from 'react';
-import toCapitalise from '../../../lib/toCapitalise';
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import InboxIcon from "@mui/icons-material/Inbox";
+import React from "react";
+import toCapitalise from "../../../lib/toCapitalise";
 
 const indexx = ({ skill }) => (
   <Card
     sx={{
-      bgcolor: 'inherit',
+      bgcolor: "inherit",
       boxShadow: 0,
       border: 0.5,
       borderRadius: 2,
-      borderColor: 'info.main',
+      borderColor: "info.main",
     }}
   >
     <CardContent>
@@ -39,17 +39,17 @@ const indexx = ({ skill }) => (
           </TableHead>
           <TableBody>
             {skill.list.map((list) => (
-              <TableRow key={list.label}>
+              <TableRow key={list.name}>
                 <TableCell sx={{ border: 0, p: 1 }}>
                   <InboxIcon size="small" color="info" />
                 </TableCell>
                 <TableCell sx={{ border: 0, p: 1 }}>
-                  <Typography>{list.label}</Typography>
+                  <Typography>{list.name}</Typography>
                   <Typography
                     sx={{
                       height: 5,
                       width: `${list.percentage}%`,
-                      bgcolor: 'info.main',
+                      bgcolor: "info.main",
                       mt: 0.5,
                     }}
                   />

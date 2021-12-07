@@ -6,7 +6,7 @@ import EmailIcon from "@mui/icons-material/MailOutlineTwoTone";
 
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Table from "./Table";
-const index = () => {
+const index = ({ aboutMe }) => {
   return (
     <Box sx={{ pt: "2rem" }}>
       <Typography
@@ -33,11 +33,7 @@ const index = () => {
       >
         I am {` `}
         <span style={{ color: "#01579b", fontWeight: 700 }}>Abdus Samad</span>,
-        a full stack web developer focused on crafting great web experiences.
-        Designing and Coding have been my passion since the days I started
-        working with computers but I found myself into web design/development
-        since 2007. I enjoy creating beautifully designed, intuitive and
-        functional websites.
+        {aboutMe}
       </Typography>
       <Box sx={{ mt: 4 }}>
         <Table />

@@ -4,41 +4,7 @@ import React from "react";
 import Toolbar from "@mui/material/Toolbar";
 import ServiceCard from "./ServiceCard";
 
-const services = [
-  {
-    label: "Full-stack Web Hosting",
-
-    description:
-      "This service I provide is of high qualit and above all full of experience in this field.",
-    icon: "",
-  },
-  {
-    label: "Full-stack E-commerce Development",
-    description:
-      "This service I provide is of high qualit and above all full of experience in this field.",
-    icon: "",
-  },
-  {
-    label: "API Development",
-    description:
-      "This service I provide is of high qualit and above all full of experience in this field.",
-    icon: "",
-  },
-  {
-    label: "Frontend Development",
-    description:
-      "This service I provide is of high qualit and above all full of experience in this field.",
-    icon: "",
-  },
-  {
-    label: "Full-Stack Development",
-    description:
-      "This service I provide is of high qualit and above all full of experience in this field.",
-    icon: "",
-  },
-];
-
-const index = () => {
+const index = ({ services }) => {
   return (
     <Box
       component="section"
@@ -55,7 +21,7 @@ const index = () => {
           component="h1"
           sx={{ fontWeight: 600 }}
         >
-          What I Offer
+          {services.subHeading}
         </Typography>
         <Typography
           align="center"
@@ -67,7 +33,18 @@ const index = () => {
             fontWeight: 700,
           }}
         >
-          My Services
+          {services.heading}
+        </Typography>
+        <Typography
+          sx={{
+            maxWidth: "sm",
+            textAlign: "center",
+            mx: "auto",
+            letterSpacing: 2,
+            mb: 2,
+          }}
+        >
+          {services.headline}
         </Typography>
         <Grid
           container
@@ -76,9 +53,9 @@ const index = () => {
           justifyContent="center"
           alignItems="stretch"
         >
-          {services.map((service) => (
+          {services.list.map((service) => (
             <Grid
-              key={service.label}
+              key={service.id || service._id || service.name}
               xs={12}
               sm={6}
               md={4}

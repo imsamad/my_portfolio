@@ -6,7 +6,7 @@ import TextField from "./TextField";
 import SendIcon from "@mui/icons-material/Send";
 import SocialLinks from "../SocialLinks";
 import Chip from "@mui/material/Chip";
-const index = () => {
+const index = ({ contact }) => {
   return (
     <Box
       component="section"
@@ -22,7 +22,7 @@ const index = () => {
           component="h1"
           sx={{ fontWeight: 600 }}
         >
-          Contact Me
+          {contact.subHeading}
         </Typography>
         <Typography
           variant="h4"
@@ -35,7 +35,19 @@ const index = () => {
             fontWeight: 700,
           }}
         >
-          Get In Touch
+          {contact.heading}
+        </Typography>
+        <Typography
+          sx={{
+            maxWidth: "sm",
+            textAlign: "center",
+            mx: "auto",
+            letterSpacing: 2,
+            mb: 2,
+          }}
+        >
+          {" "}
+          {contact.headline}
         </Typography>
         <Box sx={{ maxWidth: "sm", mx: "auto" }}>
           <Box

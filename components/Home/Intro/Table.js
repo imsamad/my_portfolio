@@ -38,8 +38,8 @@ const TR = ({ icon, label }) => (
 export default function BasicTable() {
   const [showCopy] = React.useState(true);
   return (
-    <TableContainer>
-      <Table sx={{ maxWidth: 200, position: "relative" }}>
+    <TableContainer sx={{ position: "relative" }}>
+      <Table sx={{ maxWidth: 200 }}>
         <TableHead>
           <TableRow>
             <TableCell colSpan={2}>
@@ -61,12 +61,12 @@ export default function BasicTable() {
             <TR key={label} icon={icon} label={label} />
           ))}
         </TableBody>
-        <Box sx={{ position: "absolute", top: 0, right: 0 }}>
-          <Tooltip title="Copy Info">
-            <IconButton>{showCopy && <CopyAllIcon />}</IconButton>
-          </Tooltip>
-        </Box>
       </Table>
+      <Box sx={{ position: "absolute", top: 0, left: 200 }}>
+        <Tooltip title="Copy Info">
+          <IconButton>{showCopy && <CopyAllIcon />}</IconButton>
+        </Tooltip>
+      </Box>
     </TableContainer>
   );
 }
