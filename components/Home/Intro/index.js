@@ -1,31 +1,18 @@
-import { Typography } from "@mui/material";
-import { Box } from "@mui/system";
-import React from "react";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/system/Box";
 import PhoneIcon from "@mui/icons-material/LocalPhoneTwoTone";
 import EmailIcon from "@mui/icons-material/MailOutlineTwoTone";
-
 import TwitterIcon from "@mui/icons-material/Twitter";
+
 import Table from "./Table";
+import Title from "../../UI/Title";
+import SubTitle from "../../UI/SubTitle";
+
 const index = ({ aboutMe }) => {
   return (
     <Box sx={{ pt: "2rem" }}>
-      <Typography
-        variant="caption"
-        align="center"
-        component="h1"
-        sx={{ fontWeight: 600 }}
-        gutterBottom
-      >
-        My Intro
-      </Typography>
-      <Typography
-        align="center"
-        gutterBottom
-        color="info.light"
-        sx={{ fontSize: { xs: "1.5rem", mxs: "2rem" }, fontWeight: 700 }}
-      >
-        About Me
-      </Typography>
+      <SubTitle text="My Intro" />
+      <Title text="About Me" />
       <Typography
         align="center"
         variant="body1"

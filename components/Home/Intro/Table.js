@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -12,7 +12,7 @@ import ContactIcon from "@mui/icons-material/ContactMail";
 import Typography from "@mui/material/Typography";
 import CopyAllIcon from "@mui/icons-material/CopyAll";
 import IconButton from "@mui/material/IconButton";
-import { Box } from "@mui/system";
+import Box from "@mui/system/Box";
 import Tooltip from "@mui/material/Tooltip";
 
 const Info = [
@@ -36,7 +36,7 @@ const TR = ({ icon, label }) => (
   </TableRow>
 );
 export default function BasicTable() {
-  const [showCopy] = React.useState(true);
+  const [showCopy] = useState(true);
   return (
     <TableContainer sx={{ position: "relative" }}>
       <Table sx={{ maxWidth: 200 }}>

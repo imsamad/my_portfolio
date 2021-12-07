@@ -1,21 +1,18 @@
-import React from 'react';
-
-import { Link } from '@mui/material';
-
-import { Box } from '@mui/system';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import PhoneIcon from '@mui/icons-material/LocalPhone';
-import EmailIcon from '@mui/icons-material/Email';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import IconButton from '@mui/material/IconButton';
+import Link from "@mui/material/Link";
+import Box from "@mui/system/Box";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import PhoneIcon from "@mui/icons-material/LocalPhone";
+import EmailIcon from "@mui/icons-material/Email";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import IconButton from "@mui/material/IconButton";
 
 const index = () => {
   return (
     <Box
       sx={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        my: '0.5rem',
+        display: "flex",
+        justifyContent: "space-between",
+        my: "0.5rem",
       }}
     >
       <MyLink Icon={TwitterIcon} href="https://twitter.com/imsamad06" />
@@ -27,7 +24,7 @@ const index = () => {
 };
 const MyLink = ({ href, Icon }) => (
   <Link href={href} target="_blank" rel="noopener" sx={{ mr: 1 }}>
-    <IconButton size="small" sx={{ display: 'inline-block' }}>
+    <IconButton size="small" sx={{ display: "inline-block" }}>
       <Icon fontSize="small" color="info" />
     </IconButton>
   </Link>

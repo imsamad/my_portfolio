@@ -1,17 +1,17 @@
-import * as React from "react";
+import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
-
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+
 import SideNavbar from "../SideNavbar";
 
 const index = () => {
-  const [sideNav, setSideNav] = React.useState(false);
+  const [sideNav, setSideNav] = useState(false);
   const toggleDrawer = (open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -23,12 +23,12 @@ const index = () => {
   };
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" sx={{ bgcolor: "info.light" }}>
+      <AppBar position="fixed" sx={{ bgcolor: "info.light", color: "#fff" }}>
         <Toolbar>
           <Typography
             variant="h6"
             component="h1"
-            sx={{ flexGrow: 1, fontWeight: 700 }}
+            sx={{ flexGrow: 1, fontWeight: 700, letterSpacing: 2 }}
           >
             imsamad.
           </Typography>
@@ -62,7 +62,8 @@ const NavLink = ({ href, label }) => (
     <Button
       sx={{
         color: "#fff",
-        fontWeight: "7  00",
+        fontWeight: 700,
+        letterSpacing: 2,
         textTransform: "none",
         letterSpacing: "2px",
         mr: 2,

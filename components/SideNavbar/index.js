@@ -1,16 +1,15 @@
-import * as React from "react";
+import { Fragment } from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import { ListSubheader, Toolbar, Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import ListSubheader from "@mui/material/ListSubheader";
 import CardActionArea from "@mui/material/CardActionArea";
 import Link from "@mui/material/Link";
-
 import AboutMeIcon from "@mui/icons-material/Person";
 import ContactsIcon from "@mui/icons-material/RememberMe";
 import ServicesIcon2 from "@mui/icons-material/VolunteerActivism";
@@ -39,30 +38,30 @@ export default function SideBarNav({ open, toggleDrawer }) {
         subheader={
           <ListSubheader inset={true}>
             <CardActionArea>
-              {/* <NextLink href="/"> */}
-              <Typography
-                variant="h6"
-                component="h1"
-                color="info.light"
-                sx={{ py: 1 }}
-              >
-                imsamad.
-              </Typography>
-              {/* </NextLink> */}
+              <Link href="#home" sx={{ textDecoration: "none" }}>
+                <Typography
+                  variant="h6"
+                  component="h1"
+                  color="info.light"
+                  sx={{ py: 1 }}
+                >
+                  imsamad.
+                </Typography>
+              </Link>
             </CardActionArea>
           </ListSubheader>
         }
       >
         <Divider />
         {lisItems.map((item) => (
-          <React.Fragment key={item.label}>
+          <Fragment key={item.label}>
             <Link href={item.link} underline="none" color="inherit">
               <ListItem button key={item.label}>
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.label} />
               </ListItem>
             </Link>
-          </React.Fragment>
+          </Fragment>
         ))}
       </List>
     </Box>

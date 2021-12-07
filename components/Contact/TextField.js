@@ -1,24 +1,24 @@
-import React from 'react';
-import { styled } from '@mui/material/styles';
-import TextField from '@mui/material/TextField';
+import { styled } from "@mui/material/styles";
+import TextField from "@mui/material/TextField";
+
 const CssTextField = styled(TextField)(({ theme }) => {
   const info = theme.palette.info;
   return {
-    '& label.Mui-focused': {
+    "& label.Mui-focused": {
       color: info.light,
     },
-    '& .MuiInput-underline:after': {
+    "& .MuiInput-underline:after": {
       borderColor: info.light,
     },
-    '& .MuiOutlinedInput-root': {
-      '& fieldset': {
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
         borderColor: info.light,
         borderRadius: 15,
       },
-      '&:hover fieldset': {
+      "&:hover fieldset": {
         borderColor: info.light,
       },
-      '&.Mui-focused fieldset': {
+      "&.Mui-focused fieldset": {
         borderColor: info.dark,
       },
     },

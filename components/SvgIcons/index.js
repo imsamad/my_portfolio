@@ -1,6 +1,5 @@
 import SvgIcon from "@mui/material/SvgIcon";
 
-import ProjectSvgIcon from "./Icons/project";
 import ServiceSvgIcon from "./Icons/service";
 import SkillsSvgIcon from "./Icons/skills";
 

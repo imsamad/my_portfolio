@@ -1,0 +1,32 @@
+ <Typography
+          variant="caption"
+          align="center"
+          component="h1"
+          sx={{ fontWeight: 600 }}
+        >
+          {projects.subHeading}
+        </Typography>
+        <Typography
+          variant="h4"
+          align="center"
+          color="info.light"
+          gutterBottom
+          sx={{
+            pb: 1,
+            fontSize: { xs: "1.5rem", mxs: "2rem" },
+            fontWeight: 700,
+          }}
+        >
+          {projects.heading}
+        </Typography>
+        <Typography
+          sx={{
+            maxWidth: "sm",
+            textAlign: "center",
+            mx: "auto",
+            letterSpacing: 2,
+            mb: 2,
+          }}
+        >
+          {projects.headline}{" "}
+  </Typography>

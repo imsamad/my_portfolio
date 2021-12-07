@@ -1,6 +1,7 @@
-import React from "react";
-import { Button, Typography, Link } from "@mui/material";
-import { Box } from "@mui/system";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
+import Box from "@mui/system/Box";
 import DownloadIcon from "@mui/icons-material/Download";
 
 import SocialLinks from "../../SocialLinks";
