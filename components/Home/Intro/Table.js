@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -10,10 +9,8 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import TableHead from "@mui/material/TableHead";
 import ContactIcon from "@mui/icons-material/ContactMail";
 import Typography from "@mui/material/Typography";
-import CopyAllIcon from "@mui/icons-material/CopyAll";
-import IconButton from "@mui/material/IconButton";
-import Box from "@mui/system/Box";
-import Tooltip from "@mui/material/Tooltip";
+
+import CopyMyInfo from "../../CopyMyInfo";
 
 const Info = [
   {
@@ -29,6 +26,7 @@ const Info = [
     label: "twitter.com/imsamad06",
   },
 ];
+
 const TR = ({ icon, label }) => (
   <TableRow>
     <TableCell sx={{ border: 0, p: 1.5 }}>{icon}</TableCell>
@@ -36,7 +34,6 @@ const TR = ({ icon, label }) => (
   </TableRow>
 );
 export default function BasicTable() {
-  const [showCopy] = useState(true);
   return (
     <TableContainer sx={{ position: "relative" }}>
       <Table sx={{ maxWidth: 200 }}>
@@ -62,11 +59,7 @@ export default function BasicTable() {
           ))}
         </TableBody>
       </Table>
-      <Box sx={{ position: "absolute", top: 0, left: 200 }}>
-        <Tooltip title="Copy Info">
-          <IconButton>{showCopy && <CopyAllIcon />}</IconButton>
-        </Tooltip>
-      </Box>
+      <CopyMyInfo />
     </TableContainer>
   );
 }
