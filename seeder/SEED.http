@@ -1,0 +1,7 @@
+POST http://localhost:8000/api/seed/skills
+Content-Type: application/json
+Authorization: Bearer {Token}
+
+{
+  
+}
