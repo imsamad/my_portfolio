@@ -5,6 +5,7 @@ import Box from "@mui/system/Box";
 import DownloadIcon from "@mui/icons-material/Download";
 
 import SocialLinks from "../../SocialLinks";
+import Image from "../../Image";
 
 const index = ({ intro }) => {
   return (
@@ -26,7 +27,7 @@ const index = ({ intro }) => {
           borderColor: "info.dark",
         }}
       >
-        <img src={intro.myPic} width="100%" height="100%" />
+        <Image src={intro.myPic} width="150" height="150" alt="AbdusSamad" />
       </Box>
       <Typography
         variant="h6"

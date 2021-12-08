@@ -19,14 +19,21 @@ const index = ({ project }) => {
         }}
       >
         <CardMedia
+          sx={{ p: 1 }}
           component="img"
-          height="150"
+          height="250"
           width="100%"
           image={project.image}
           alt={project.name}
         />
+
         <CardContent>
-          <Typography gutterBottom variant="h6" component="div">
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="h1"
+            sx={{ fontWeight: 600 }}
+          >
             {project.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
