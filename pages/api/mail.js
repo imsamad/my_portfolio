@@ -33,6 +33,7 @@ const index = (req, res) => {
 
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
+        // console.log("Error ", error);
         return res.status(404).json({
           success: false,
           message: "There is some error in sending mail, plz try again!",

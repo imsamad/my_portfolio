@@ -6,8 +6,9 @@ const Message = ({ text, extra }) => {
         maxWidth: "sm",
         textAlign: "center",
         mx: "auto",
-        letterSpacing: 2,
-        mb: 2,
+        letterSpacing: 1,
+        fontStyle: "italic",
+        my: 6,
       }}
     >
       {text} {` `}

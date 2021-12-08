@@ -44,11 +44,19 @@ const index = () => {
         });
         const data = await res.json();
         // console.log("data ", data);
-        setHeadMsg({
-          open: true,
-          type: "success",
-          message: "Sent successfully!",
-        });
+        if (!data.success) {
+          setHeadMsg({
+            open: true,
+            type: "error",
+            message: "Error in sending,please try again!",
+          });
+        } else {
+          setHeadMsg({
+            open: true,
+            type: "success",
+            message: "Sent successfully!",
+          });
+        }
       } catch (err) {
         // console.log("Err from submitContactForm", err);
         setHeadMsg({
