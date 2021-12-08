@@ -23,7 +23,7 @@ const index = ({ iconLg }) => {
         href="https://twitter.com/imsamad06"
         iconLg={iconLg}
       />
-      <MyLink Icon={PhoneIcon} href="tel:9870645161" iconLg={iconLg} />
+      <MyLink Icon={PhoneIcon} href="tel:+919870645161" iconLg={iconLg} />
       <MyLink
         Icon={EmailIcon}
         href="mailto:imsamad00@gmail.com"

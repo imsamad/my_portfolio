@@ -47,7 +47,7 @@ const index = ({ intro }) => {
         Full Stack Developer
       </Typography>
       <SocialLinks />
-      <Link href={intro.resumeLink} style={{ textDecoration: "none" }}>
+      <Link href={intro.resumeLink} download style={{ textDecoration: "none" }}>
         <Button
           variant="contained"
           color="info"
