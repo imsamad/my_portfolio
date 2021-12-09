@@ -22,7 +22,7 @@ const index = () => {
 export default index;
 const MyLink = ({ href, label }) => (
   <Link
-    underline="hover"
+    underline="always"
     href={href}
     sx={{
       fontWeight: 600,

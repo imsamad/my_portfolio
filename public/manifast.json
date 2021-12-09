@@ -1,12 +1,12 @@
 {
   "theme_color": "#42a5f5",
-  "background_color": "#dddddd",
+  "background_color": "#ADD8E6",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
   "name": "Abdus Samad - My Portfolio",
   "description": "My Portfolio Site",
-  "short_name": "imsamad",
+  "short_name": "Abdus Samad",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",
