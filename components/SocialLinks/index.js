@@ -20,7 +20,7 @@ const index = ({ iconLg }) => {
     >
       <MyLink
         Icon={TwitterIcon}
-        href="https://twitter.com/imsamad06"
+        href="https://twitter.com/imsamad00"
         iconLg={iconLg}
       />
       <MyLink Icon={PhoneIcon} href="tel:+919870645161" iconLg={iconLg} />

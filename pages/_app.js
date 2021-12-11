@@ -18,7 +18,7 @@ export default function MyApp(props) {
       <Head>
         <title>Abdus Samad</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <link rel="shortcut icon" href="/icons/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />

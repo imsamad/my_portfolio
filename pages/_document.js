@@ -20,14 +20,13 @@ export default class MyDocument extends Document {
           <meta name="description" content={APP_DESCRIPTION} />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
-          <link rel="manifest" href="/manifest.json" />
-          {/* <link rl="apple-touch-icon" href="/icon.png"></link> */}
+          <link rel="manifest" href="/manifest.json" /> 
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/icons/apple-touch-icon.png"
+            href="/apple-touch-icon.png"
           />
-          <link rel="shortcut icon" href="/icons/favicon.ico" />
+          <link rel="shortcut icon" href="/favicon.ico" />
 
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />

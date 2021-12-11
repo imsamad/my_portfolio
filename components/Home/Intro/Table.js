@@ -25,7 +25,7 @@ const Info = [
   },
   {
     icon: <TwitterIcon fontSize="small" color="info" />,
-    label: "twitter.com/imsamad06",
+    label: "twitter.com/imsamad00",
   },
   {
     icon: <GitHubIcon fontSize="small" color="info" />,
