@@ -1,10 +1,11 @@
 import Grid from "@mui/material/Grid";
 
-import SkillCard from "./SkillCard";
 import SubTitle from "../UI/SubTitle";
 import Title from "../UI/Title";
 import Layout from "../Layout";
-
+import Frontend from "./SkillCard/Frontend";
+import Backend from "./SkillCard/Backend";
+import Database from "./SkillCard/Database";
 const index = ({ skills }) => {
   return (
     <Layout id="skills">
@@ -17,17 +18,15 @@ const index = ({ skills }) => {
         justifyContent="center"
         alignItems="stretch"
       >
-        {skills.list.map((skill) => (
-          <Grid
-            key={skill?.id || skill?._id || skill?.name}
-            xs={12}
-            sm={6}
-            md={4}
-            item
-          >
-            <SkillCard skill={skill} />
-          </Grid>
-        ))}
+        <Grid xs={12} sm={6} md={4} item>
+          <Frontend />
+        </Grid>
+        <Grid xs={12} sm={6} md={4} item>
+          <Backend />
+        </Grid>
+        <Grid xs={12} sm={6} md={4} item>
+          <Database />
+        </Grid>
       </Grid>
     </Layout>
   );

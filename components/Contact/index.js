@@ -24,10 +24,10 @@ const index = ({ contact }) => {
         >
           <SocialLinks />
         </Box>
-        <Divider>
+        {/* <Divider>
           <Chip label="OR" />
         </Divider>
-        <Form />
+        <Form /> */}
       </Box>
     </Layout>
   );
